@@ -1,4 +1,4 @@
-# HUOKAING THARA - Cybersecurity Expert
+# HUOKAING THARA - Cybersecurity
 
 ## About Me
 I'm a highly motivated and experienced cybersecurity professional with a diverse skillset spanning penetration testing, ethical hacking, network security, incident response, threat intelligence, and cryptography. I'm always eager to learn and explore new frontiers in cybersecurity to stay ahead of evolving threats.
@@ -15,7 +15,6 @@ I'm a highly motivated and experienced cybersecurity professional with a diverse
 - Artificial Intelligence
 - Machine Learning
 - Network Security
-- Cryptography
 
 ## Experience & Certifications
 I have completed the following courses and certifications to enhance my expertise in cybersecurity:
