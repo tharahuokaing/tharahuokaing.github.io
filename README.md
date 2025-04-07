@@ -22,7 +22,6 @@ I have completed the following courses and certifications to enhance my expertis
 - Data Science Certificate
 - Artificial Intelligence Certificate
 - Hacking Advanced Certificate
-- Cryptography Certificate
 
 ## Contact Me
 If you have any questions or would like to discuss how I can assist with your cybersecurity needs, please don't hesitate to reach out. I'm here to help protect your digital assets and keep your systems secure.
