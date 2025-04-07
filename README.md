@@ -1,7 +1,7 @@
 # HUOKAING THARA - Cybersecurity
 
 ## About Me
-I'm a highly motivated and experienced cybersecurity professional with a diverse skillset spanning penetration testing, ethical hacking, network security, incident response, threat intelligence, and cryptography. I'm always eager to learn and explore new frontiers in cybersecurity to stay ahead of evolving threats.
+I'm a highly motivated and experienced cybersecurity professional with a diverse skillset spanning penetration testing, ethical hacking, network security, cyber threat intelligence (CTI). I'm always eager to learn and explore new frontiers in cybersecurity to stay ahead of evolving threats.
 
 ## My Skills & Expertise
 - Penetration Testing
