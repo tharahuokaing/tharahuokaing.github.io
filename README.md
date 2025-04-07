@@ -7,7 +7,6 @@ I'm a highly motivated and experienced cybersecurity professional with a diverse
 - Penetration Testing
 - Data Forensic
 - Cyber Threat Intelligence (CTI)
-- Incident Response
 - Data Recovery
 - Disaster Recovery
 - Ethical Hacking
@@ -38,15 +37,12 @@ huokaingthara/
 ├── skills/
 │   ├── penetration-testing.md
 │   ├── ethical-hacking.md
-│   ├── network-security.md
-│   ├── incident-response.md
-│   └── cryptography.md
+│   └── network-security.md
 ├── experience/
 │   ├── cybersecurity-certificate.md
 │   ├── data-science-certificate.md
-│   ├── ai-certificate.md
-│   ├── hacking-advanced-certificate.md
-│   └── cryptography-certificate.md
+│   ├── ai-certificate.md 
+│   └── hacking-advanced-certificate.md
 └── privacy-policy.md
 ```
 
