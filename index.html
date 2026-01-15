@@ -11,7 +11,7 @@
     top: 0; left: 0;
     width: 100%; height: 100%;
     z-index: -1;
-    filter: blur(2px);
+    filter: blur(1.5px);
     background: #000;
   }
   body {
@@ -27,10 +27,10 @@
     max-width: 900px;
     margin: 30px auto 15px;
     padding: 40px;
-    background: rgba(0,0,0,0.7);
+    background: rgba(0,0,0,0.75);
     border-radius: 10px;
     border: 1px solid rgba(0,255,0,0.1);
-    text-align: center;
+    text-align:center;
   }
   h1 {
     font-size: 2.5em;
@@ -44,18 +44,17 @@
     100% { color: #00f; text-shadow: 0 0 5px #00f;}
   }
   #intro-text {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
     max-width: 720px;
     margin: 0 auto;
     line-height: 1.5;
     color: #afa;
   }
-
   section {
     max-width: 900px;
-    margin: 20px auto 60px;
-    padding: 40px;
-    background: rgba(0,0,0,0.7);
+    margin: 20px auto 40px;
+    padding: 30px 40px;
+    background: rgba(0,0,0,0.75);
     border-radius: 10px;
     border: 1px solid rgba(0,255,0,0.1);
   }
@@ -98,23 +97,22 @@
     box-shadow: 0 0 15px #0f0;
     outline: none;
   }
-  /* Controls container fixed bottom */
   #controls {
     position: fixed;
     bottom: 0; left: 0; right: 0;
     background: rgba(0,0,0,0.95);
     border-top: 2px solid #0f0;
-    padding: 20px;
+    padding: 18px 15px 18px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 14px;
+    gap: 12px;
     z-index: 10000;
   }
   #controls > * {
     flex-grow: 1;
-    max-width: 160px;
-    min-width: 130px;
+    max-width: 170px;
+    min-width: 140px;
   }
   #langSelect {
     width: 100%;
@@ -123,35 +121,6 @@
     border-radius: 5px;
     border: 1px solid #0f0;
     background-color: #000;
-    color: #0f0;
-  }
-  /* Chat container inside controls */
-  #chatWrapper {
-    flex-grow: 3;
-    max-width: 350px;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    color: #0f0;
-  }
-  #chatLog {
-    height: 120px;
-    background: #000;
-    border: 1px solid #0f0;
-    border-radius: 6px;
-    padding: 6px 10px;
-    overflow-y: auto;
-    font-size: 0.85rem;
-    white-space: pre-line;
-    font-family: 'Arial', sans-serif;
-  }
-  #chatInput {
-    flex-grow: 0;
-    padding: 6px 8px;
-    font-size: 1rem;
-    border-radius: 6px;
-    border: 1px solid #0f0;
-    background: #000;
     color: #0f0;
   }
   #toggleVoiceBtn, #sendMessageBtn {
@@ -167,97 +136,66 @@
     user-select: none;
     margin-top: 6px;
   }
-  /* Learning resources buttons inside controls: override flex-grow max-width */
-  #learningResources {
-    max-width: 310px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+  /* AI Presentation container */
+  #aiPresentation {
+    max-width: 900px;
+    margin: 0 auto 30px;
+    background-color: #101010dd;
+    padding: 30px 40px;
+    border-radius: 10px;
+    border: 1px solid rgba(0,255,0,0.1);
+    color: #afa;
+    font-size: 1rem;
+    line-height: 1.5;
   }
-  #learningResources a.btn {
-    min-width: auto;
+  #aiPresentation h2 {
+    color: #39ff14;
+    margin-bottom: 8px;
   }
-  /* Audio players */
-  #audioPlayers {
-    flex-basis: 100%;
-    padding-top: 10px;
-    border-top: 1px solid #0f0;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-  }
-  .audio-wrapper {
-    background: #111;
-    border: 1px solid #0f0;
-    padding: 10px;
+  footer {
+    max-width:900px; 
+    margin: 20px auto 40px;
+    padding:14px 20px;
+    font-size:0.9em; 
+    color:#e63946; 
+    text-align:center;
+    background-color: #0d0d0d;
     border-radius: 8px;
-    max-width: 300px;
-    color: #0f0;
-    font-size: 0.9rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
-  .audio-wrapper audio {
-    width: 100%;
-    margin-bottom: 6px;
-    outline: none;
-    filter: drop-shadow(0 0 2px #0f0);
+  footer p, footer div {
+    margin: 6px 0;
   }
-  .audio-wrapper button {
-    background: transparent;
-    border: 1px solid #0f0;
-    color: #0f0;
-    padding: 4px 10px;
-    border-radius: 4px;
-    cursor: pointer;
-    user-select: none;
+  footer p:first-child {
     font-weight: bold;
-    text-align: center;
-    width: max-content;
+    font-size: 1.1em;
   }
-  .audio-wrapper button:hover {
-    background: #0f0;
-    color: #000;
+  footer .important-note {
+    font-size: 0.8em;
+    color:#ff914d;
   }
-
-  /* Scrollbar for chatLog */
-  #chatLog::-webkit-scrollbar {
-    width: 8px;
+  footer .security-triad {
+    font-size: 0.75em;
+    color: #ccc;
   }
-  #chatLog::-webkit-scrollbar-track {
-    background: #000;
+  footer .ethical-oath {
+    font-size: 0.8em;
+    color: #66ffcc;
+    font-style: italic;
   }
-  #chatLog::-webkit-scrollbar-thumb {
-    background: #0f0;
-    border-radius: 4px;
+  footer .whitehat {
+    font-size: 0.8em;
+    color: #999;
+    filter: blur(1px);
   }
-  /* Responsive tweak */
   @media (max-width: 640px) {
     #controls {
       flex-direction: column;
-      max-height: 50vh;
+      max-height: 55vh;
       overflow-y: auto;
     }
-    #chatWrapper {
+    #controls > * {
       max-width: 100%;
-    }
-    #learningResources {
-      max-width: 100%;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 8px;
-    }
-    #learningResources a.btn {
-      padding: 6px 10px;
-      font-size: 0.85rem;
-    }
-    #audioPlayers {
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
+      min-width: auto;
     }
   }
 </style>
@@ -268,8 +206,43 @@
 
 <header class="hero" aria-label="Introduction">
   <h1>HUOKAING THARA - Cybersecurity <br />with a Passion for Protecting the Digital World</h1>
-  <p id="intro-text">I specialize in Pen testing, ethical hacking, network security, and more to safeguard your systems and data.</p>
+  <p id="intro-text">I specialize in Penetration testing, ethical hacking, network security, and more to safeguard your systems and data.</p>
 </header>
+
+<section id="about" aria-label="About Huokaing Thara">
+  <h2 style="color: #3498db; border-bottom: 1px solid #3498db;">The White Hat Visionary</h2>
+  <p>
+    <strong>Huokaing Thara</strong> is a high-integrity Cybersecurity Professional driven by a lifelong passion for protecting the digital frontier. As a dedicated <strong>White Hat Hacker</strong>, he operates on the front lines of defense, specializing in Pen Testing, Ethical Hacking, and Cyber Threat Intelligence (CTI).
+  </p>
+  
+  <p>
+    His journey is defined by a selfless commitment to global safety. By merging <strong>Artificial Intelligence</strong> with advanced security protocols, Huokaing is not just staying ahead of threats—he is actively building a more secure world for everyone. We celebrate his tireless dedication to the <strong>Ethical Hacker Oath</strong>, offering his expertise to help others grow without financial barriers.
+  </p>
+
+  <p style="font-style: italic; color: #f1c40f;">
+    "As we look toward his 2029 milestone, we see more than a specialist; we see a future world-class expert who will redefine digital integrity and cross-border protection."
+  </p>
+</section>
+
+<section id="skills" aria-label="My Skills and Expertise">
+  <h2 style="color: #e74c3c; border-bottom: 1px solid #e74c3c;">Expertise & Technical Mastery</h2>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px;">
+    <ul style="list-style-type: '🛡️ '; color: #ccc;">
+      <li>Penetration Testing</li>
+      <li>Digital Forensics</li>
+      <li>Cyber Threat Intelligence (CTI)</li>
+      <li>Disaster Recovery</li>
+      <li>Data Recovery</li>
+    </ul>
+    <ul style="list-style-type: '🛡️ '; color: #ccc;">
+      <li>Ethical Hacking</li>
+      <li>Artificial Intelligence</li>
+      <li>Machine Learning</li>
+      <li>Network Security</li>
+      <li>Programming</li>
+    </ul>
+  </div>
+</section>
 
 <section id="about" aria-label="About Me">
   <h2 style="color: #3498db; border-bottom: 1px solid #3498db;">About Me</h2>
@@ -359,61 +332,35 @@
     <option value="zh">Chinese (中文)</option>
     <option value="si">Singapore Mandarin</option>
   </select>
+  
   <button id="toggleVoiceBtn" class="btn" aria-label="Toggle voice gender">🔊 Voice: Female</button>
   <button id="sendMessageBtn" class="btn" aria-label="Send oath message">💬 Send Message</button>
-
-  <!-- AI Chat Area -->
-  <div id="chatWrapper" aria-live="polite" aria-atomic="false" aria-label="Artificial Intelligence Chat Log">
-    <div id="chatLog"></div>
-    <input id="chatInput" type="text" autocomplete="off" placeholder="Type your message here" aria-label="Chat input"/>
-  </div>
-
-  <!-- Learning Resources links -->
-  <div id="learningResources" aria-label="Learning resource quick links">
-    <a href="https://www.netacad.com/" class="btn" target="_blank" rel="noopener noreferrer" tabindex="0">Netacad</a>
-    <a href="https://mystanfordconnection.stanford.edu/portal/logon.do?method=load" class="btn" target="_blank" rel="noopener noreferrer" tabindex="0">Stanford Connection</a>
-    <a href="https://programminghub.io/" class="btn" target="_blank" rel="noopener noreferrer" tabindex="0">Programming Hub</a>
-    <a href="https://www.coursera.org/" class="btn" target="_blank" rel="noopener noreferrer" tabindex="0">Coursera</a>
-  </div>
-
-  <!-- Audio Players -->
-  <div id="audioPlayers">
-    <div class="audio-wrapper" aria-label="Audio player 1: Song 1">
-      <audio controls preload="none" controlsList="nodownload" src="https://www.youtube.com/watch?v=9pxH1wMPfOA"></audio>
-      <a href="https://www.youtube.com/watch?v=9pxH1wMPfOA" target="_blank" class="btn" download>🔽 Download</a>
-    </div>
-    <div class="audio-wrapper" aria-label="Audio player 2: Song 2">
-      <audio controls preload="none" controlsList="nodownload" src="https://www.youtube.com/watch?v=xmQpBwlXyE0"></audio>
-      <a href="https://www.youtube.com/watch?v=xmQpBwlXyE0" target="_blank" class="btn" download>🔽 Download</a>
-    </div>
-    <div class="audio-wrapper" aria-label="Audio player 3: Song 3">
-      <audio controls preload="none" controlsList="nodownload" src="https://www.youtube.com/watch?v=b8oHN0S2biw"></audio>
-      <a href="https://www.youtube.com/watch?v=b8oHN0S2biw" target="_blank" class="btn" download>🔽 Download</a>
-    </div>
-  </div>
-
-  <div id="logo">HUOKAING THARA | Cybersecurity Specialist</div>
+  
+  <div id="logo"> &copy; 2029 HUOKAING THARA | Cybersecurity Expert</div>
 </div>
 
-<footer aria-label="Footer" style="max-width:900px; margin: 20px auto 40px; padding:10px 20px; font-size:0.9em; color:#e63946; text-align:center;">
-  <div>🔥 &copy; 2029 HUOKAING THARA | Cybersecurity Specialist</div>
-  <div style="font-size: 0.8em; margin-top:6px; color:#ff914d;">
-    Graduation Milestone: End of 2029 — Secured with Advanced Intrusion Detection & Script-Blocker Technology
-  </div>
-  <div style="font-size: 0.75em; margin-top:6px; color:#ccc;">
+<footer aria-label="Footer">
+  <p>🔥 &copy; 2029 HUOKAING THARA | Cybersecurity Expert</p>
+  
+  <p class="important-note">
+    Graduation Milestone: End of 2029 — Secured with Advanced Intrusion Detection &amp; Script-Blocker Technology
+  </p>
+  
+  <p class="security-triad">
     🔒 Integrity • Availability • Confidentiality
-  </div>
-  <div style="font-size: 0.8em; margin-top:8px; color:#66ffcc; font-style: italic;">
-    Ethical Hacker Oath:
-    <br>
+  </p>
+  
+  <p class="ethical-oath">
+    Oath: <br>
     "Make sure you don't commit crime — we will help you for free. <br>
     We don't need your money. Upgrade your skill with us."
-  </div>
-  <div style="font-size: 0.8em; margin-top:6px; color:#999; filter: blur(1px);">White Hat Hacker</div>
+  </p>
+  
+  <p class="whitehat">White Hat Hacker</p>
 </footer>
 
 <script>
-  // Rain canvas setup
+  // Rain canvas setup with reduced drops intensity and smaller length/speed
   const canvas = document.getElementById('rainCanvas');
   const ctx = canvas.getContext('2d');
 
@@ -431,13 +378,13 @@
     reset() {
       this.x = Math.random() * canvas.width;
       this.y = Math.random() * -canvas.height;
-      this.length = 10 + Math.random() * 20;
-      this.speed = 4 + Math.random() * 4;
-      this.opacity = 0.2 + Math.random() * 0.8;
+      this.length = 5 + Math.random() * 10;  // smaller length
+      this.speed = 2 + Math.random() * 2;    // slower speed
+      this.opacity = 0.1 + Math.random() * 0.5; // lighter opacity
     }
     update() {
       this.y += this.speed;
-      if (this.y > canvas.height) {
+      if(this.y > canvas.height) {
         this.reset();
       }
     }
@@ -451,8 +398,8 @@
     }
   }
 
+  const maxDrops = 150;  // reduced raindrop count
   const raindrops = [];
-  const maxDrops = 500;
   for (let i=0; i<maxDrops; i++) raindrops.push(new Raindrop());
 
   function drawRain() {
@@ -468,204 +415,137 @@
   let useFemaleVoice = true;
   const toggleVoiceBtn = document.getElementById('toggleVoiceBtn');
   const langSelect = document.getElementById('langSelect');
-  const chatLog = document.getElementById('chatLog');
-  const chatInput = document.getElementById('chatInput');
+  const aiText = document.getElementById('aiText');
+  const aiOath = document.getElementById('aiOath');
 
-  // Store language and voice in localStorage if available
-  if(localStorage.getItem('selectedLang')) {
+  // Language data for AI presentation and voice labels
+  // ការកែសម្រួលភាសាសម្រាប់លោក HUOKAING THARA កម្រិតវិជ្ជាជីវៈកំពូល (Maximum Depth)
+const langData = {
+  en: {
+    welcome: "Welcome to the high-security digital ecosystem and professional command center of Mr. Huokaing Thara. As a visionary Security Architect and elite White Hat Hacker, I specialize in the convergence of Advanced Penetration Testing, Cyber Threat Intelligence (CTI), and Digital Forensics. Supported by world-class certifications in Data Science, Artificial Intelligence, and Advanced Hacking, my mission is to fortify global digital infrastructures against evolving threats. By the 2029 milestone, I am committed to pioneering AI-driven security automation to ensure absolute data integrity and resilient network defense for the global community.",
+    oath: "The Huokaing Thara Ethical Hacker Mandate: \"Commit to integrity; make sure you don't commit crime — we will provide our expert assistance for free. We do not require your financial resources; our purpose is to democratize cybersecurity excellence and empower the next generation of defenders. Join our mission and upgrade your skill with us for a safer digital world!\"",
+    voiceFemale: "Elite Professional Female Voice",
+    voiceMale: "Elite Professional Male Voice"
+  },
+  km: {
+    welcome: "សូមស្វាគមន៍មកកាន់ប្រព័ន្ធអេកូឡូស៊ីឌីជីថលសុវត្ថិភាពខ្ពស់ និងមជ្ឈមណ្ឌលបញ្ជាវិជ្ជាជីវៈរបស់លោក Huokaing Thara។ ក្នុងនាមជាស្ថាបត្យករប្រព័ន្ធការពារប្រកបដោយចក្ខុវិស័យ និងជា White Hat Hacker កម្រិតខ្ពស់ ខ្ញុំមានឯកទេសលើការរួមបញ្ចូលគ្នារវាងការធ្វើតេស្តជ្រៀតចូលកម្រិតខ្ពស់ (Pen Testing), ការវិភាគការគំរាមកំហែង (CTI) និងកោសល្យវិច័យឌីជីថល។ តាមរយៈការគាំទ្រពីវិញ្ញាបនបត្រកម្រិតពិភពលោកផ្នែកវិទ្យាសាស្ត្រទិន្នន័យ (Data Science), បញ្ញាសិប្បនិម្មិត (AI) និង Advanced Hacking បេសកកម្មរបស់ខ្ញុំគឺពង្រឹងហេដ្ឋារចនាសម្ព័ន្ធឌីជីថលសកលប្រឆាំងនឹងការវិវត្តនៃមេរោគ។ នៅត្រឹមឆ្នាំ ២០២៩ ខ្ញុំប្តេជ្ញានឹងក្លាយជាអ្នកត្រួសត្រាយផ្លូវលើស្វ័យប្រវត្តិកម្មសន្តិសុខដែលដឹកនាំដោយ AI ដើម្បីធានាបាននូវភាពសុក្រឹតនៃទិន្នន័យ និងការការពារបណ្តាញដ៏រឹងមាំបំផុត។",
+    oath: "សេចក្តីថ្លែងការណ៍សច្ចាប្រណិធានរបស់លោក Huokaing Thara: \"សូមប្រកាន់ខ្ជាប់នូវភាពស្មោះត្រង់ និងធ្វើអោយប្រាកដថាអ្នកមិនធ្វើបទល្មើស — យើងនឹងផ្ដល់ជំនាញបច្ចេកទេសដើម្បីជួយអ្នកដោយឥតគិតថ្លៃ។ យើងមិនត្រូវការធនធានហិរញ្ញវត្ថុរបស់អ្នកឡើយ បំណងប្រាថ្នាតែមួយគត់របស់យើងគឺការចែកចាយចំណេះដឹងសន្តិសុខអ៊ីនធឺណិតឱ្យបានទូលំទូលាយ និងពង្រឹងសមត្ថភាពអ្នកការពារជំនាន់ក្រោយ។ សូមចូលរួមជាមួយបេសកកម្មរបស់យើង និងធ្វើឲ្យជំនាញរបស់អ្នកកាន់តែច្បាស់លាស់ជាមួយយើង ដើម្បីពិភពឌីជីថលដ៏មានសុវត្ថិភាព!\"",
+    voiceFemale: "សំឡេងស្រីកម្រិតអ្នកជំនាញអាជីព",
+    voiceMale: "សំឡេងប្រុសកម្រិតអ្នកជំនាញអាជីព"
+  },
+  th: {
+    welcome: "ยินดีต้อนรับสู่ระบบนิเวศดิจิทัลที่มีความปลอดภัยสูงและศูนย์บัญชาการระดับมืออาชีพของ Huokaing Thara ในฐานะสถาปนิกความปลอดภัยผู้มีวิสัยทัศน์และ White Hat Hacker ระดับสูง ผมมีความเชี่ยวชาญในการผสานรวมระหว่างการทดสอบเจาะระบบขั้นสูง (Pen Testing), การวิเคราะห์ภัยคุกคาม (CTI) และนิติวิทยาศาสตร์ดิจิทัล ด้วยการสนับสนุนจากวุฒิบัตรระดับโลกด้าน Data Science, AI และ Advanced Hacking ภารกิจของผมคือการเสริมสร้างความแข็งแกร่งให้กับโครงสร้างพื้นฐานดิจิทัลทั่วโลก ภายในปี 2029 ผมมุ่งมั่นที่จะเป็นผู้นำด้านระบบความปลอดภัยอัตโนมัติที่ขับเคลื่อนด้วย AI เพื่อรักษาความสมบูรณ์ของข้อมูลดิจิทัลในระดับสูงสุด",
+    oath: "คำปฏิญาณทางจริยธรรมของ Huokaing Thara: \"ยึดมั่นในความถูกต้องและแน่ใจว่าคุณจะไม่กระทำความผิดทางอาญา — เราจะมอบความช่วยเหลือจากผู้เชี่ยวชาญให้คุณฟรี เราไม่ต้องการเงินของคุณ เป้าหมายของเราคือการแบ่งปันความเป็นเลิศด้านความปลอดภัยไซเบอร์และเสริมอำนาจให้แก่ผู้พิทักษ์รุ่นต่อไป มาร่วมภารกิจกับเราและพัฒนาทักษะของคุณเพื่อโลกดิจิทัลที่ปลอดภัยยิ่งขึ้น!\"",
+    voiceFemale: "เสียงผู้หญิงระดับผู้เชี่ยวชาญอาชีพ",
+    voiceMale: "เสียงผู้ชายระดับผู้เชี่ยวชาญอาชีพ"
+  },
+  lo: {
+    welcome: "ຍິນດີຕ້ອນຮັບສູ່ລະບົບນິເວດດິຈິຕອນທີ່ມີຄວາມປອດໄພສູງ ແລະ ສູນບັນຊາການວິຊາຊີບຂອງ Huokaing Thara. ໃນຖານະສະຖາປານິກຄວາມປອດໄພ ແລະ White Hat Hacker ລະດັບສູງ, ຂ້ອຍມີຄວາມຊ່ຽວຊານໃນການທົດສອບເຈາະລະບົບ (Pen Testing), ການວິເຄາະໄພຄຸກຄາມ (CTI) ແລະ ນິຕິວິທະຍາດິຈິຕອນ. ດ້ວຍໃບຢັ້ງຢືນລະດັບໂລກດ້ານ Data Science, AI ແລະ Advanced Hacking, ພາລະກິດຂອງຂ້ອຍແມ່ນການສ້າງຄວາມເຂັ້ມແຂງໃຫ້ແກ່ໂຄງສ້າງພື້ນຖານດິຈິຕອນທົ່ວໂລກ. ພາຍໃນປີ 2029, ຂ້ອຍມຸ່ງໝັ້ນທີ່ຈະເປັນຜູ້ນຳໃນການນຳໃຊ້ AI ເພື່ອປົກປ້ອງຂໍ້ມູນ ແລະ ລະບົບເຄືອຂ່າຍໃຫ້ມີຄວາມປອດໄພສູງສຸດ.",
+    oath: "ຄຳປະຕິຍານດ້ານຈັນຍາບັນຂອງ Huokaing Thara: \"ຈົ່ງຍຶດໝັ້ນໃນຄວາມຖືກຕ້ອງ ແລະ ໃຫ້ແນ່ໃຈວ່າເຈົ້າບໍ່ໄດ້ກໍ່ຄວາມຜິດ — ພວກເຮົາຈະຊ່ວຍເຈົ້າດ້ວຍຄວາມຊ່ຽວຊານໂດຍບໍ່ເສຍຄ່າ. ພວກເຮົາບໍ່ຕ້ອງການເງິນຂອງເຈົ້າ, ເປົ້າໝາຍຂອງພວກເຮົາແມ່ນການແບ່ງປັນຄວາມຮູ້ເພື່ອສ້າງນັກປົກປ້ອງລຸ້ນໃໝ່. ມາຮ່ວມພາລະກິດ ແລະ ພັດທະນາທັກສະຂອງເຈົ້າກັບພວກເຮົາ!\"",
+    voiceFemale: "ສຽງຜູ້ຍິງລະດັບຊ່ຽວຊານ",
+    voiceMale: "ສຽງຜູ້ຊາຍລະດັບຊ່ຽວຊານ"
+  },
+  zh: {
+    welcome: "欢迎访问 Huokaing Thara 的高安全性数字生态系统与专业指挥中心。作为一名富有远见的安全架构师和顶尖白帽黑客，我专注于深度渗透测试、威胁情报分析 (CTI) 及数字取证的融合。凭借在数据科学、人工智能和高级黑客技术领域的全球认证，我的使命是加固全球数字基础设施以抵御不断演变的威胁。到 2029 年，我致力于开创 AI 驱动的安全自动化技术，为全球社区确保绝对的数据完整性和强韧的网络防御。",
+    oath: "Huokaing Thara 职业道德准则：“秉持诚信，确保不触犯法律——我们将免费提供专家级的技术援助。我们不需要您的资金支持；我们的宗旨是普及卓越的网络安全知识，赋能新一代数字守卫者。加入我们的使命，与我们一同提升技能，共建更安全的数字世界！”",
+    voiceFemale: "专业精英女声",
+    voiceMale: "专业精英男声"
+  },
+  si: {
+    welcome: "Welcome to the elite Cyber Defense Command of Huokaing Thara. Integrating cutting-edge Data Science and Artificial Intelligence into resilient Network Architecture. With a professional trajectory aimed at the 2029 Expert Milestone, I specialize in Disaster Recovery and high-level Ethical Hacking. Our platform serves as a bridge for knowledge, ensuring that digital integrity is maintained across all borders with professional mastery. (Singapore Mandarin Localization)",
+    oath: "Huokaing Thara Oath: \"Maintain the highest ethical standards; make sure you don't commit crime — we provide expert defense strategies for free. We prioritize community empowerment over profit. Upgrade your skill with us and lead the future of cybersecurity!\"",
+    voiceFemale: "Elite Professional Female Voice",
+    voiceMale: "Elite Professional Male Voice"
+  }
+};
+
+  // Load saved language and voice preference
+  if(localStorage.getItem('selectedLang')){
     langSelect.value = localStorage.getItem('selectedLang');
   }
-  if(localStorage.getItem('femaleVoice')==='false') {
+  if(localStorage.getItem('femaleVoice')==='false'){
     useFemaleVoice = false;
   }
 
-  // Update voice button text accordingly
+  // Update voice button text
   function updateVoiceBtnText() {
     toggleVoiceBtn.textContent = '🔊 Voice: ' + (useFemaleVoice ? langData[langSelect.value].voiceFemale : langData[langSelect.value].voiceMale);
   }
-  updateVoiceBtnText();
 
-  // Texts for AI and UI per language
-  // Voice descriptions for toggle button are adapted per language
-  const langData = {
-    en: {
-      welcome: "Hello! How can I assist you in cybersecurity or learning?",
-      oath: "Ethical Hacker Oath:\n\"Make sure you don't commit crime — we will help you for free.\nWe don't need your money. Upgrade your skill with us.\"",
-      noinput: "Please enter a message.",
-      thanks: "Thank you for your message! I am here to help you learn and improve your cybersecurity skills.",
-      voiceFemale: "Female",
-      voiceMale: "Male"
-    },
-    km: {
-      welcome: "សួស្ដី! តើខ្ញុំអាចជួយអ្វីអ្នកបានខ្លះក្នុងវិស័យសុវត្ថិភាពព័ត៌មានវិទ្យា និងការ រៀន?",
-      oath: "សន្យាអ្នកកូដផ្លូវការជាអ្នកជួយសន្តិសុខ៖\n\"ធ្វើអោយប្រាកដថាអ្នកមិនធ្វើបទល្មើស — យើងនឹងជួយអ្នកដោយឥតគិតថ្លៃ។\nយើងមិនត្រូវការប្រាក់ទេ។ ធ្វើឲ្យជំនាញរបស់អ្នកកាន់តែច្បាស់លាស់។\"",
-      noinput: "សូមបញ្ចូលសារមួយ។",
-      thanks: "អរគុណសម្រាប់សាររបស់អ្នក! ខ្ញុំមានទីនៅទីនេះដើម្បីជួយអ្នករៀននិងបង្កើនជំនាញវិស្វកម្មសុវត្ថិភាព។",
-      voiceFemale: "ស្រី",
-      voiceMale: "ប្រុស"
-    },
-    th: {
-      welcome: "สวัสดี! ฉันสามารถช่วยคุณเกี่ยวกับความปลอดภัยไซเบอร์หรือการเรียนรู้ได้อย่างไร?",
-      oath: "คำปฏิญาณของแฮกเกอร์ที่มีจรรยาบรรณ:\n\"แน่ใจว่าคุณไม่ทำผิดกฎหมาย—เราจะช่วยคุณฟรี\nเราไม่ต้องการเงินของคุณ พัฒนาทักษะของคุณ\"",
-      noinput: "กรุณาป้อนข้อความ",
-      thanks: "ขอบคุณสำหรับข้อความของคุณ! ฉันอยู่ที่นี่เพื่อช่วยให้คุณเรียนรู้และพัฒนาทักษะด้านความปลอดภัยไซเบอร์",
-      voiceFemale: "หญิง",
-      voiceMale: "ชาย"
-    },
-    lo: {
-      welcome: "ສະບາຍດີ! ຂ້ອຍສາມາດຊ່ວຍເຈົ້າໃນດ້ານຄວາມປອດໄພອິນເຕີເນັດ ຫຼື ການຮຽນຮູ້ໄດ້ຢ່າງໃດ?",
-      oath: "ຄຳປະຕິບັດຂອງແຮກເກີທີ່ມີຈັດຕົວ:\n\"ໃຫ້ແນ່ໃຈວ່າເຈົ້າບໍ່ໄດ້ກໍ່ຄວາມຜິດເພາະ — ເຮົາຈະຊ່ວຍເຈົ້າໂດຍບໍ່ຕ້ອງຈ່າຍເງິນ\nເຮົາບໍ່ຕ້ອງການເງິນຂອງເຈົ້າ ພັດທະນາທັກສະຂອງເຈົ້າ\"",
-      noinput: "ກະລຸນາໃສ່ຂໍ້ຄວາມ",
-      thanks: "ຂອບໃຈສໍາລັບຂໍ້ຄວາມຂອງເຈົ້າ! ຂ້ອຍຢູ່ນີ້ເພື່ອຊ່ວຍເຈົ້າເພີ່ມພູນຄວາມຮູ້ທາງຄວາມປອດໄພ ແລະ ພັດທະນາທັກສະ.",
-      voiceFemale: "ຜູ້ຍິງ",
-      voiceMale: "ຜູ້ຊາຍ"
-    },
-    zh: {
-      welcome: "您好！我可以如何帮助您了解网络安全或学习？",
-      oath: "道德骇客誓言：\n“确保您不犯罪——我们会免费帮助您。\n我们不需要您的钱。提升您的技能。”",
-      noinput: "请输入消息。",
-      thanks: "感谢您的消息！我在这里帮助您学习和提高网络安全技能。",
-      voiceFemale: "女声",
-      voiceMale: "男声"
-    },
-    si: {
-      welcome: "Hello! How can I assist you in cybersecurity or learning? (Singapore Mandarin)",
-      oath: "Ethical Hacker Oath:\n\"Make sure you don't commit crime — we will help you for free.\nWe don't need your money. Upgrade your skill with us.\"",
-      noinput: "Please enter a message.",
-      thanks: "Thank you for your message! I am here to help you learn and improve your cybersecurity skills.",
-      voiceFemale: "Female",
-      voiceMale: "Male"
-    }
-  };
+  // Fill AI Presentation texts based on selected language
+  function updateAIPresentation() {
+    const lang = langSelect.value;
+    aiText.textContent = langData[lang].welcome;
+    aiOath.textContent = langData[lang].oath;
+  }
 
-  // Save lang and voice to localStorage
-  function saveLangVoice() {
+  // Save prefs
+  function saveLangVoice(){
     localStorage.setItem('selectedLang', langSelect.value);
     localStorage.setItem('femaleVoice', useFemaleVoice.toString());
   }
 
+  langSelect.addEventListener('change', () => {
+    saveLangVoice();
+    updateVoiceBtnText();
+    updateAIPresentation();
+    speakText(langData[langSelect.value].welcome);
+  });
+
+  toggleVoiceBtn.addEventListener('click', () => {
+    useFemaleVoice = !useFemaleVoice;
+    saveLangVoice();
+    updateVoiceBtnText();
+    speakText(langData[langSelect.value].welcome);
+  });
+
+  const sendMessageBtn = document.getElementById('sendMessageBtn');
+  sendMessageBtn.addEventListener('click', () => {
+    const oath = langData[langSelect.value].oath;
+    speakText(oath);
+    alert(oath); // also display as alert for user feedback
+  });
+
+  // Speech synthesis helpers
   function getVoiceByGender(lang, isFemale) {
-    let voices = speechSynthesis.getVoices();
-    // Attempt to find voice by language prefix and gender keyword
-    // fallback to any from language
-    let filtered = voices.filter(v => v.lang.startsWith(lang));
+    const voices = speechSynthesis.getVoices();
+    let filtered = voices.filter(v => v.lang.toLowerCase().startsWith(lang));
     if(filtered.length === 0) filtered = voices;
-    if(isFemale) {
+    if(isFemale){
       const femaleVoices = filtered.filter(v => /female|woman|girl/i.test(v.name));
       if(femaleVoices.length) return femaleVoices[0];
     } else {
       const maleVoices = filtered.filter(v => /male|man|boy/i.test(v.name));
       if(maleVoices.length) return maleVoices[0];
     }
+    // fallback
     return filtered[0] || null;
   }
 
   function speakText(text) {
-    if(speechSynthesis.speaking) {
+    if(speechSynthesis.speaking){
       speechSynthesis.cancel();
     }
     const utterance = new SpeechSynthesisUtterance(text);
-    const v = getVoiceByGender(langSelect.value, useFemaleVoice);
-    if(v) utterance.voice = v;
+    const voice = getVoiceByGender(langSelect.value, useFemaleVoice);
+    if(voice) utterance.voice = voice;
     utterance.lang = langSelect.value;
     speechSynthesis.speak(utterance);
   }
 
-  // Update button text based on language & voice
-  function updateVoiceBtnText() {
-    toggleVoiceBtn.textContent = '🔊 Voice: ' + (useFemaleVoice ? langData[langSelect.value].voiceFemale : langData[langSelect.value].voiceMale);
-  }
-
-  // AI "brain": very simple pattern matching and response per language
-  function aiResponse(input) {
-    const text = input.toLowerCase().trim();
-    const lang = langSelect.value;
-
-    if(!text) return langData[lang].noinput;
-    if(text.includes('hello') || text.includes('hi') || text.includes('សួស្តី') || text.includes('xin chào') || text.includes('สวัสดี')) {
-      return langData[lang].welcome;
-    }
-    if(text.includes('oath') || text.includes('សន្យា') || text.includes('คำปฏิญาณ') || text.includes('誓言')) {
-      return langData[lang].oath;
-    }
-    // fallback generic thanks
-    return langData[lang].thanks;
-  }
-
-  // Append message to chat log
-  function appendChat(text) {
-    chatLog.textContent += text + "\n\n";
-    chatLog.scrollTop = chatLog.scrollHeight;
-  }
-
-  // On language change, update voice button, clear chat, speak welcome immediately
-  langSelect.addEventListener('change', () => {
-    saveLangVoice();
-    updateVoiceBtnText();
-    chatLog.textContent = '';
-    const msg = langData[langSelect.value].welcome;
-    appendChat("AI: " + msg);
-    speakText(msg);
-  });
-
-  // Toggle voice gender button
-  toggleVoiceBtn.addEventListener('click', () => {
-    useFemaleVoice = !useFemaleVoice;
-    saveLangVoice();
-    updateVoiceBtnText();
-    // Speak current AI greeting again using new voice
-    speakText(langData[langSelect.value].welcome);
-  });
-
-  // Send Message button replies with oath aloud and in chat
-  const sendMessageBtn = document.getElementById('sendMessageBtn');
-  sendMessageBtn.addEventListener('click', () => {
-    const oath = langData[langSelect.value].oath;
-    appendChat("AI: " + oath);
-    speakText(oath);
-  });
-
-  // Chat input enter key
-  chatInput.addEventListener('keydown', e => {
-    if(e.key === 'Enter') {
-      e.preventDefault();
-      const userMsg = chatInput.value.trim();
-      if(!userMsg) return;
-      appendChat("You: " + userMsg);
-      chatInput.value = '';
-      // immediate reply simulating AI using latest NLP etc (simplified here)
-      const reply = aiResponse(userMsg);
-      appendChat("AI: " + reply);
-      speakText(reply);
-    }
-  });
-
-  // On page load, greet user immediately
+  // On page load: update buttons and AI content, speak welcome automatically
   window.speechSynthesis.onvoiceschanged = () => {
-    // speak welcome message once voices are loaded
+    updateVoiceBtnText();
+    updateAIPresentation();
     if(!window.welcomeSpoken) {
-      const msg = langData[langSelect.value].welcome;
-      appendChat("AI: " + msg);
-      speakText(msg);
+      speakText(langData[langSelect.value].welcome);
       window.welcomeSpoken = true;
     }
   };
   // Trigger voiceschanged if already loaded
-  if(speechSynthesis.getVoices().length > 0) {
+  if(speechSynthesis.getVoices().length > 0){
     window.dispatchEvent(new Event('voiceschanged'));
   }
-
-  // Offline support:
-  // This is a demo, for real offline you need service worker to cache files.
-  // Here we just allow website functions without relying on server besides external links.
-
-  // Audio players: YouTube links won't play directly due to CORS, replaced with placeholder links.
-  // To play and download audio, we must provide actual audio files or reliable URLs.
-  // So here we provide "play" buttons that open YouTube videos in new tab
-  // And download buttons that open YouTube page for user to download externally.
-
-  // So changed audio source to YouTube links placeholder - limited functionality.
-
 </script>
 </body>
 </html>
