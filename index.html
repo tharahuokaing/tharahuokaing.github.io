@@ -4,89 +4,63 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>HUOKAING THARA | Cybersecurity Expert</title>
-<style>
-  /* Background Rain Canvas Styling */
-  #rainCanvas {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    z-index: -1;
-    filter: blur(1.5px); /* Keeps your original blur */
-    background: #000;
-  }
-  
-  /* Your existing UI styling remains the same */
-  body {
-    margin: 0; padding: 0;
-    font-family: 'Courier New', Courier, monospace;
-    color: white;
-    background: #000;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-  /* ... Rest of your CSS classes (hero, btn, controls, etc) ... */
-</style>
-
 <script>
   const canvas = document.getElementById('rainCanvas');
   const ctx = canvas.getContext('2d');
 
-  // Binary characters
-  const binary = "10";
+  // Binary characters only
+  const binary = "01";
   const fontSize = 16;
-  let columns;
-  let drops = [];
+  let columns, drops;
 
-  function initializeCanvas() {
+  function initCanvas() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
     
-    // Calculate columns based on font size
+    // Calculate columns based on width and font size
     columns = Math.floor(canvas.width / fontSize);
     
-    // Reset drops array
+    // An array of drops - one per column
+    // drops[i] stores the current y-position of the drop
     drops = [];
-    for (let i = 0; i < columns; i++) {
-      // Randomize starting Y position to prevent "flat line" start
-      drops[i] = Math.random() * -100; 
+    for (let x = 0; x < columns; x++) {
+      drops[x] = Math.random() * -100; // Randomize start heights for organic feel
     }
   }
 
   function draw() {
     // Semi-transparent black rectangle to create the trailing effect
+    // This allows previous frames to fade out slowly
     ctx.fillStyle = "rgba(0, 0, 0, 0.1)";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    // Matrix Green color
-    ctx.fillStyle = "#0F0"; 
-    ctx.font = fontSize + "px monospace";
+    // Set the font and color
+    ctx.fillStyle = "#0f0"; // Matrix Green
+    ctx.font = fontSize + "px 'Courier New', monospace";
 
+    // Loop over drops
     for (let i = 0; i < drops.length; i++) {
-      // Pick 0 or 1 randomly
+      // Choose a random binary character
       const text = binary.charAt(Math.floor(Math.random() * binary.length));
       
-      // Render the character
-      // x = i * fontSize, y = drops[i] * fontSize
+      // Draw the character (x = column index * size, y = drop value * size)
       ctx.fillText(text, i * fontSize, drops[i] * fontSize);
 
-      // Reset drop to top after it crosses the bottom of the screen
-      // Added a random factor to reset to make the rain look organic
+      // Sending the drop back to the top randomly after it has crossed the screen
+      // Added a random factor to make the resets look staggered
       if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
         drops[i] = 0;
       }
 
-      // Increment Y position
+      // Increment Y coordinate
       drops[i]++;
     }
   }
 
-  // Handle window resizing
-  window.addEventListener('resize', initializeCanvas);
-
   // Initialize and start loop
-  initializeCanvas();
-  setInterval(draw, 35); // Approx 30 frames per second
+  initCanvas();
+  window.addEventListener('resize', initCanvas);
+  setInterval(draw, 35);
 </script>
 </head>
 <body>
