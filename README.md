@@ -1,51 +1,71 @@
-# HUOKAING THARA - Cybersecurity
+EADME – HUOKAING THARA | Cybersecurity Expert
+👋 Introduction
+Welcome to my GitHub! I’m Huokaing Thara, a passionate Cybersecurity Professional dedicated to protecting the digital frontier. My mission is to safeguard systems, networks, and data through ethical hacking, penetration testing, and advanced cyber threat intelligence.
 
-## About Me
-I'm a highly motivated and experienced cybersecurity professional with a diverse skillset spanning penetration testing, ethical hacking, network security, cyber threat intelligence (CTI). I'm always eager to learn and explore new frontiers in cybersecurity to stay ahead of evolving threats.
+🔐 Vision
+As a White Hat Hacker, I operate with integrity, availability, and confidentiality at the core of my work. I believe in sharing knowledge freely, helping others grow without financial barriers, and building a safer digital world.
 
-## My Skills & Expertise
-- Penetration Testing
-- Data Forensic
-- Cyber Threat Intelligence (CTI)
-- Data Recovery
-- Disaster Recovery
-- Ethical Hacking
-- Programming
-- Artificial Intelligence
-- Machine Learning
-- Network Security
+🛠️ Expertise & Skills
+Penetration Testing
 
-## Experience & Certifications
-I have completed the following courses and certifications to enhance my expertise in cybersecurity:
-- Cybersecurity Certificate
-- Data Science Certificate
-- Artificial Intelligence Certificate
-- Hacking Advanced Certificate
+Ethical Hacking
 
-## Contact Me
-If you have any questions or would like to discuss how I can assist with your cybersecurity needs, please don't hesitate to reach out. I'm here to help protect your digital assets and keep your systems secure.
+Cyber Threat Intelligence (CTI)
 
-You can contact me at:
-- Email: tharahuokaing@gmail.com
+Digital Forensics
 
-## Repo Structure
-This GitHub repository contains the following folders and files:
+Disaster & Data Recovery
 
-```
-huokaingthara/
-├── README.md
-├── skills/
-│   ├── penetration-testing.md
-│   ├── ethical-hacking.md
-│   └── network-security.md
-├── experience/
-│   ├── cybersecurity-certificate.md
-│   ├── data-science-certificate.md
-│   ├── ai-certificate.md 
-│   └── hacking-advanced-certificate.md
-└── privacy-policy.md
-```
+Network Security
 
-The `skills/` directory contains detailed information about my expertise in various cybersecurity domains. The `experience/` directory showcases the certifications and courses I have completed. The `privacy-policy.md` file outlines the privacy policies for this project.
+Artificial Intelligence & Machine Learning
 
-Feel free to explore the repository and learn more about my cybersecurity capabilities and background.
+Programming
+
+🌍 Languages
+Khmer
+
+English
+
+Thai
+
+Chinese (currently learning)
+
+Laotian (currently learning)
+
+Singapore Mandarin (currently learning)
+
+🎓 Certifications & Learning
+Cybersecurity Certificate
+
+Data Science Certificate
+
+Artificial Intelligence Certificate
+
+Advanced Hacking Certificate
+
+Learning Resources: Netacad, Stanford Connection, Programming Hub, Coursera
+
+📜 Ethical Oath
+“Make sure you don’t commit crime — we will help you for free. We don’t need your money. Upgrade your skill with us.”
+
+📅 Milestone
+🎓 Graduation Goal: End of 2029  
+Secured with advanced cybersecurity knowledge and a lifelong commitment to digital integrity.
+
+🔗 Useful Links
+Google Gemini
+
+Microsoft Copilot
+
+Baidu ERNIE
+
+VirusTotal
+
+📬 Get in Touch
+Voice: Female Voice
+
+Message: Available via GitHub Pages contact form
+
+✨ This repository reflects my journey as a cybersecurity expert.  
+Feel free to explore, collaborate, and learn together as we build a safer digital world.
