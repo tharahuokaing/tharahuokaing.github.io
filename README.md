@@ -1,3 +1,4 @@
+## ⚠️ Educational Use Only
 # README – HUOKAING THARA | Cybersecurity Expert  
 
 ## 👋 Introduction  
