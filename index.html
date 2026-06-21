@@ -273,14 +273,54 @@
 </section>
 
 <section id="experience" aria-label="Experience and Certifications">
-  <h2 style="color: #9b59b6; border-bottom: 1px solid #9b59b6;">Experience & Certifications</h2>
+  <h2 style="color: #9b59b6; border-bottom: 1px solid #9b59b6;">
+    Experience & Certifications
+  </h2>
+
   <ul class="certifications" style="list-style-type: '✔ '; color: #fff;">
-    <li>Cybersecurity Certificate (2022 - 2028)</li>
-    <li>Data Science Certificate (2022 - 2028)</li>
-    <li>Artificial Intelligence Certificate (2022 - 2028)</li>
-    <li>Hacking Advanced Certificate</li>
+    <li onclick="showCertificate('cybersecurity.jpg')"
+        style="cursor:pointer;">
+      Cybersecurity Certificate (2022 - 2028)
+    </li>
+
+    <li onclick="showCertificate('datascience.jpg')"
+        style="cursor:pointer;">
+      Data Science Certificate (2022 - 2028)
+    </li>
+
+    <li onclick="showCertificate('ai.jpg')"
+        style="cursor:pointer;">
+      Artificial Intelligence Certificate (2022 - 2028)
+    </li>
+
+    <li onclick="showCertificate('hacking.jpg')"
+        style="cursor:pointer;">
+      Hacking Advanced Certificate
+    </li>
   </ul>
+
+  <!-- Single image display row -->
+  <div id="certificate-view"
+       style="display:none; margin-top:20px; text-align:center;">
+    <img id="certificate-image"
+         src=""
+         alt="Certificate"
+         style="
+           max-width:100%;
+           width:700px;
+           border:2px solid #9b59b6;
+           border-radius:10px;
+           box-shadow:0 0 15px rgba(155,89,182,0.5);
+         ">
+  </div>
 </section>
+
+<script>
+function showCertificate(imageSrc) {
+  document.getElementById("certificate-image").src = imageSrc;
+  document.getElementById("certificate-view").style.display = "block";
+}
+</script>
 
 <section id="learning-resources" aria-label="Learning Resources">
   <h2 style="color: #9b59b6; border-bottom: 1px solid #9b59b6;">Learning Resources</h2>
