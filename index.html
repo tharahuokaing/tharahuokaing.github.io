@@ -290,7 +290,21 @@
       🕵️ Hacking Advanced Certificate
     </li>
   </ul>
+
+  <!-- Image display area -->
+  <div id="certificateDisplay" style="margin-top:20px; text-align:center;">
+    <img id="certificateImage" src="" alt="Certificate" style="max-width:80%; display:none; border:2px solid #9b59b6; border-radius:8px;"/>
+  </div>
 </section>
+
+<script>
+  function showCertificate(imageFile) {
+    const img = document.getElementById("certificateImage");
+    img.src = imageFile;
+    img.style.display = "block";
+  }
+</script>
+
   
 <section id="experience" aria-label="Experience and Certifications">
   <h2 style="color: #9b59b6; border-bottom: 1px solid #9b59b6;">
